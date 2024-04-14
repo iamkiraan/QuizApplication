@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardActivity"
+    tools:openDrawer = "start"
+    android:fitsSystemWindows="true"
     android:background="@color/background_color">
 
+        <include
+            layout="@layout/mainlayout"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="23sp"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,7 +58,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,17 +68,33 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardViewBg"
-                    android:layout_marginTop="30dp"
+                    app:cardBackgroundColor="@color/cardColor"
+                    android:layout_marginTop="40dp"
                     android:layout_marginStart="5dp"
-                    app:cardCornerRadius="5dp"/>
+                    app:cardCornerRadius="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General \nknowledge"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="22sp"/>
+                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardViewBg"
-                    android:layout_marginTop="30dp"
+                    app:cardBackgroundColor="@color/cardColor"
+                    android:layout_marginTop="40dp"
                     android:layout_marginStart="20dp"
-                    app:cardCornerRadius="5dp"/>
+                    app:cardCornerRadius="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General \nknowledge"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="22sp"/>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -70,44 +104,83 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardViewBg"
-                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/cardColor"
+                    android:layout_marginTop="50dp"
                     android:layout_marginStart="5dp"
-                    app:cardCornerRadius="5dp"/>
+                    app:cardCornerRadius="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General \nknowledge"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="22sp"/>
+                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardViewBg"
-                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/cardColor"
+                    android:layout_marginTop="50dp"
                     android:layout_marginStart="20dp"
-                    app:cardCornerRadius="5dp"/>
+                    app:cardCornerRadius="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General \nknowledge"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="22sp"/>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardViewBg"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="5dp"
-                    app:cardCornerRadius="5dp"/>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardViewBg"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="20dp"
-                    app:cardCornerRadius="5dp"/>
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="15dp"-->
+<!--                android:orientation="horizontal">-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="150dp"-->
+<!--                    app:cardBackgroundColor="@color/cardColor"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginStart="5dp"-->
+<!--                    app:cardCornerRadius="5dp"/>-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="150dp"-->
+<!--                    app:cardBackgroundColor="@color/cardColor"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    app:cardCornerRadius="5dp"/>-->
+<!--            </LinearLayout>-->
 
 
         </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
-
-
 </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nevigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/drawerlayout"
+        android:layout_gravity="start"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            app:menu="@menu/bottommenu"
+            android:layout_gravity="bottom"
+            />
+
+    </FrameLayout>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

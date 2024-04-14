@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_color">#31304D</color>
     <color name="cardViewBg">#F0ECE5</color>
+    <color name="cardColor">#658CBB</color>
+    tra
 
 </resources>

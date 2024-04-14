@@ -8,7 +8,6 @@
     android:background="@color/background_color"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:layout_width="388dp"
         android:layout_height="409dp"
@@ -40,7 +39,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="4dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,44 +55,73 @@
             android:textColor="@color/black"
             android:textSize="24sp" />
 
-        <ImageView
-            android:layout_marginTop="112dp"
-            android:layout_marginStart="5dp"
-            android:layout_width="25dp"
-            android:layout_height="20dp"
-            android:layout_marginBottom="124dp"
-            android:src="@drawable/pointr"
-            app:layout_constraintBottom_toBottomOf="@+id/cardView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.304"
-            app:layout_constraintStart_toStartOf="parent" />
+<!--        <ImageView-->
+<!--            android:layout_marginTop="112dp"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_marginBottom="124dp"-->
+<!--            android:src="@drawable/pointr"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/cardView"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.304"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:counterTextColor="@color/black"
+        android:layout_gravity="center_horizontal">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="180dp"
+            android:id="@+id/name"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            app:counterTextColor="@color/black"
-            android:layout_gravity="center_horizontal">
-            <com.google.android.material.textfield.TextInputEditText
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:drawableStart="@drawable/baseline_portrait_24"
+            android:gravity="center_horizontal"
+            android:hint="username"
+            android:textColor="@color/black"
+            android:padding="10dp"
 
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="90dp"
-                android:drawableStart="@drawable/baseline_portrait_24"
-                android:gravity="center_horizontal"
-                android:hint="username"
-                android:textColor="@color/black"
-                android:padding="10dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:counterTextColor="@color/black"
+        android:layout_gravity="center_horizontal">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="180dp"
+            android:id="@+id/email"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:gravity="center_horizontal"
+            android:hint="email"
+            android:textColor="@color/black"
+            android:padding="10dp"
 
-                />
+            />
 
 
-        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
+
+</LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+
+
 
 
 
