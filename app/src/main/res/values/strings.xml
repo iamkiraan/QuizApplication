@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Quiz</string>
+    <string name="Open">open</string>
+    <string name="Close">close\n</string>
 </resources>

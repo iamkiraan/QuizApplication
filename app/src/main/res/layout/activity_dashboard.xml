@@ -27,140 +27,257 @@
         android:textColor="@color/white"
         android:textSize="23sp"/>
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="160dp"
+        android:padding="10dp"
         android:background="@drawable/rectangle"
-        app:cardBackgroundColor="@color/white">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Explore"
-                android:textSize="16sp"
-                android:layout_marginTop="6dp"
-                android:layout_marginStart="15dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="See All"
-                android:textSize="16sp"
-                android:layout_marginTop="6dp"
-                android:layout_marginStart="210dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-        </LinearLayout>
+        app:cardBackgroundColor="@color/background_color">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardColor"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginStart="5dp"
-                    app:cardCornerRadius="5dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="General \nknowledge"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"
-                        android:textSize="22sp"/>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardColor"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginStart="20dp"
-                    app:cardCornerRadius="5dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="General \nknowledge"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"
-                        android:textSize="22sp"/>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardColor"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginStart="5dp"
-                    app:cardCornerRadius="5dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="General \nknowledge"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"
-                        android:textSize="22sp"/>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:cardBackgroundColor="@color/cardColor"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginStart="20dp"
-                    app:cardCornerRadius="5dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="General \nknowledge"
-                        android:textColor="@color/black"
-                        android:layout_gravity="center"
-                        android:textSize="22sp"/>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="15dp"-->
-<!--                android:orientation="horizontal">-->
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:layout_width="150dp"-->
-<!--                    android:layout_height="150dp"-->
-<!--                    app:cardBackgroundColor="@color/cardColor"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:layout_marginStart="5dp"-->
-<!--                    app:cardCornerRadius="5dp"/>-->
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:layout_width="150dp"-->
-<!--                    android:layout_height="150dp"-->
-<!--                    app:cardBackgroundColor="@color/cardColor"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    app:cardCornerRadius="5dp"/>-->
-<!--            </LinearLayout>-->
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/rectangle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="5dp"
+                        app:cardCornerRadius="5dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/gk"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="General knowledge"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/sports"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sports and Entertainment"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="5dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/music"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Music"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/sice"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Science"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="5dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/hist"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="History"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/georaph"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Geography"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="5dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/society"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Society and culture"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardBackgroundColor="@color/cardColor"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cinema"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cinema"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
 
-        </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nevigationView"
+        android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/menu"
@@ -168,11 +285,12 @@
         android:layout_gravity="start"
         />
     <FrameLayout
+        android:id="@+id/FrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
             app:menu="@menu/bottommenu"
             android:layout_gravity="bottom"
             />
